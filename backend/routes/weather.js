@@ -27,7 +27,10 @@ weatherRouter.get("/", (req, res) => {
 
 class Forecast {
   constructor(day) {
-    (this.date = day.valid_date), (this.description = day.weather.description);
+    (this.date = day.valid_date), 
+    (this.description = day.weather.description.toLowerCase()), 
+    (this.highTemp = day.high_temp),
+    (this.lowTemp = day.low_temp)
   }
 }
 
